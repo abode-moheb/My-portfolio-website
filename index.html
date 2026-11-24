@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio — skills, projects and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress"></div>
+
+  <header class="nav" id="nav">
+    <a href="#hero" class="logo" data-bind="shortName"></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="btn btn-sm">Contact me</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow reveal">👋 Hello, I'm</p>
+          <h1 class="hero-name reveal" data-bind="name"></h1>
+          <h2 class="hero-role reveal">
+            <span class="typed" id="typed"></span><span class="caret">|</span>
+          </h2>
+          <p class="hero-intro reveal" data-bind="heroIntro"></p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#" class="btn btn-ghost" id="cvBtn" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="avatar-ring">
+            <img id="avatar" alt="Profile photo" />
+          </div>
+          <div class="float-badge fb1">⚡ Fast</div>
+          <div class="float-badge fb2">🎨 Creative</div>
+          <div class="float-badge fb3">🚀 Scalable</div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title" id="aboutTitle"></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal" id="aboutText"></div>
+          <ul class="about-info reveal" id="aboutInfo"></ul>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">My technical toolbox</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Projects</span>
+          <h2 class="section-title">Selected work I'm proud of</h2>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">What Can I Build</span>
+          <h2 class="section-title">Solutions tailored to your needs</h2>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Let's build something great together</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p id="contactText"></p>
+            <ul class="contact-list" id="contactList"></ul>
+            <div class="socials" id="socials"></div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="field">
+              <input type="text" id="fName" required placeholder=" " />
+              <label for="fName">Your Name</label>
+            </div>
+            <div class="field">
+              <input type="email" id="fEmail" required placeholder=" " />
+              <label for="fEmail">Your Email</label>
+            </div>
+            <div class="field">
+              <textarea id="fMsg" rows="5" required placeholder=" "></textarea>
+              <label for="fMsg">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-full">Send Message ✈️</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
